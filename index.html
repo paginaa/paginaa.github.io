@@ -1,35 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ade.css">
     <title>Document</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-
 <body>
-    <center>
-        <div data-aos="zoom-in"><hr><h1><h1>Messi</h1></h1><hr><img src="messi.jpg"></div>
-        <div data-aos="fade-right"><hr><h1><h1>Messi</h1></h1><hr><img src="messi.jpg"></div>
-        <div data-aos="fade-up"><hr><h1><h1>Messi</h1></h1><hr><img src="messi.jpg"></div>
-        <div data-aos="fade-left"><hr><h1><h1>Messi</h1></h1><hr><img src="messi.jpg"></div>
-        <div data-aos="fade-up-right"><hr><h1><h1>Messi</h1></h1><hr><img src="messi.jpg"></div>
-        <div data-aos="flip-left"><hr><h1><h1>Messi</h1></h1><hr><img src="messi.jpg"></div>
-        <div data-aos="flip-down"><hr><h1><h1>Messi</h1></h1><hr><img src="messi.jpg"></div>
-        <div data-aos="zoom-out-left"><hr><h1><h1>Messi</h1></h1><hr><img src="messi.jpg"></div>
-        <div data-aos="zoom-in"><hr><h1><h1>Messi</h1></h1><hr><img src="messi.jpg"></div>
-        <div data-aos="flip-left"><hr><h1><h1>Messi</h1></h1><hr><img src="messi.jpg"></div>
-        
-    </center>
+    <div class="item item--secondary"
+    data-aos="fade-right"
+    data-aos-anchor="#trigger-left"
+    data-aos-anchor-placement="top-top">
+ LEFT
+ <span>when top of <strong>2</strong> hits top of window</span>
+</div>
 
+<div class="item item--primary"
+    data-aos="fade-left"
+    data-aos-anchor="#trigger-right"
+    data-aos-anchor-placement="top-center">
+ RIGHT
+ <span>when top of <strong>5</strong> hits center of window</span>
+</div>
 
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+<div class="item">1</div>
+<div class="item" id="trigger-left">
+ 2
+ <span>trigger left</span>
+</div>
+<div class="item">3</div>
+<div class="item">4</div>
+<div class="item" id="trigger-right">
+ 5
+ <span>trigger right</span>
+</div>
+<div class="item">6</div>
+<div class="item">7</div>
+<div class="item">8</div>
+<div class="item">9</div>
+<div class="item">10</div>
+<div class="item">11</div>
+<div class="item">12</div>
+<script>
+AOS.init({
+    duration: 1200,
+    easing: 'ease-in-out-back'
+  });
+</script>
+  
 </body>
-
 </html>
